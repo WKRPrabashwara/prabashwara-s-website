@@ -13,7 +13,7 @@
     --body-color: hsl(var(--hue), var(--sat), 98%);
     --container-color: #fff;
     /* STATIC TYPOGRAPHY */
-    --body-font: "IBM Plex Mono", system-ui;
+    --body-font: "Prabashwara", system-ui;
     --big-font-size: 3.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -26,6 +26,7 @@
     --font-medium: 500;
     --font-semibold: 600;
     --font-bold: 700;
+    --font-maxbold: 800;
     /* BOTTOM MARGINS */
     --mb-0-25: .25rem;
     --mb-0-5: 0.5rem;
@@ -53,6 +54,15 @@
         --smaller-font-size: 0.75rem;
         --smallest-font-size: 0.625rem;
     }
+}
+
+@font-face {
+    font-family: "Prabashwara";
+    src: url('./fonts/PNASpatioMonoDEMO-Book.ttf') format('truetype'),
+         url('./fonts/PNASpatioMonoDEMO-MediumItalic.ttf') format('truetype'),
+         url('./fonts/PNASpatioMonoDEMO-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* BASE */
@@ -137,6 +147,11 @@ img {
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: 4rem;
+    font-weight: var(--font-semibold);
+}
+
+.section__title {
+    text-transform: uppercase;
 }
 
 .section__title,

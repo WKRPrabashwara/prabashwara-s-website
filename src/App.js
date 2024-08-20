@@ -10,7 +10,7 @@ import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
 import Portfolio from './components/projects/Portfolio';
-import './components/security/index';
+// import './components/security/index';
 
 const App = () => {
   return (

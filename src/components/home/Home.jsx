@@ -14,7 +14,7 @@ const Home = () => {
                     <Data />
                 </div>
                 <Scroll />
-            </div> 
+            </div>
         </section>
     )
 }

@@ -39,7 +39,7 @@
     position: relative;
     font-size: var(--h3-font-size);
     padding-left: 5.4rem;
-    font-weight: var(--font-normal);
+    font-weight: var(--font-semibold);
     margin-bottom: var(--mb-1);
 }
 
