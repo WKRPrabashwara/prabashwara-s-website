@@ -15,7 +15,13 @@
     column-gap: 1rem;
 }
 
-.nav__logo, .nav__toggle {
+.nav__logo {
+    color: var(--title-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
 }
@@ -33,6 +39,7 @@
     color: var(--title-color);
     font-weight: var(--font-medium);
     transition: .3s;
+    text-transform: uppercase;
 }
 
 .nav__icon, .nav__close, .nav__toggle {
@@ -42,6 +49,7 @@
 /* ACTIVE LINK */
 .active-link, .nav__link:hover {
     color: var(--title-color-dark);
+    font-weight: 700;
 }
 
 /* CHANGE HEADER */

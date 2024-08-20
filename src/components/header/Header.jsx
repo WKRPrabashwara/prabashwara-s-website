@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './header.css';
+import { IoQrCode } from "react-icons/io5";
 import { HiOutlineHome, HiOutlineUser, HiOutlineBadgeCheck, HiOutlineClipboardList, HiOutlinePhotograph, HiOutlineMail, HiX, HiOutlineMenu } from "react-icons/hi";
 
 
@@ -16,7 +17,7 @@ const Header = () => {
     return(
         <header className="header">
             <nav className="nav container">
-                <a href="index.html" className="nav__logo">Portfolio</a>
+                <a href="index.html" className="nav__logo"><IoQrCode className="title__icon" /> Prabashwara.</a>
                 <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
                     <ul className="nav__list grid">
                         <li className="nav__item">
@@ -38,15 +39,15 @@ const Header = () => {
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="#services" onClick={() => setActiveNav("#services")} 
+                            <a href="#portfolio" onClick={() => setActiveNav("#services")} 
                             className={activeNav === "#services" ? "nav__link active-link" : "nav__link"}>
-                                <HiOutlineClipboardList className="nav__icon"/>Services
+                                <HiOutlineClipboardList className="nav__icon"/>Projects
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="#portfolio" onClick={() => setActiveNav("#portfolio")} 
-                            className={activeNav === "#portfolio" ? "nav__link active-link" : "nav__link"}>
-                                <HiOutlinePhotograph className="nav__icon"/>Projects
+                            <a href="#blog" onClick={() => setActiveNav("#blog")} 
+                            className={activeNav === "#blog" ? "nav__link active-link" : "nav__link"}>
+                                <HiOutlinePhotograph className="nav__icon"/>Blog
                             </a>
                         </li>
                         <li className="nav__item">

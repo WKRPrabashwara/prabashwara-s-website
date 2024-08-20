@@ -1,5 +1,5 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* CSS VARIABLES */
 :root {
@@ -13,7 +13,7 @@
     --body-color: hsl(var(--hue), var(--sat), 98%);
     --container-color: #fff;
     /* STATIC TYPOGRAPHY */
-    --body-font: "Nunito", sans-serif;
+    --body-font: "IBM Plex Mono", system-ui;
     --big-font-size: 3.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -66,7 +66,10 @@ html {
     scroll-behavior: smooth;
 }
 
-body, button, input, textarea {
+body,
+button,
+input,
+textarea {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
 }
@@ -74,9 +77,12 @@ body, button, input, textarea {
 body {
     background-color: var(--body-color);
     color: var(--text-color);
+    cursor: default;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--title-color);
     font-weight: var(--font-semibold);
 }
@@ -87,6 +93,23 @@ ul {
 
 a {
     text-decoration: none;
+    -webkit-tap-highlight-color: none;
+}
+
+a:active {
+    background-color: none;
+}
+
+a:focus {
+    outline: none;
+    border: none;
+    background-color: none;
+}
+
+@media (pointer: coarse) {
+    a:active {
+        background-color: none;
+    }
 }
 
 button {
@@ -100,6 +123,11 @@ img {
     height: auto;
 }
 
+::selection {
+    background-color: #c9c9c9d2;
+    color: hsl(var(--hue), var(--sat), 35%);
+}
+
 /* CSS CLASSES */
 .section {
     padding: 6rem 0 2rem;
@@ -111,7 +139,8 @@ img {
     margin-bottom: 4rem;
 }
 
-.section__title, .section__subtitle {
+.section__title,
+.section__subtitle {
     text-align: center;
 }
 
@@ -151,6 +180,10 @@ img {
     align-items: center;
 }
 
+.title__icon {
+    margin-bottom: -3px;
+}
+
 /* BREAK POINTS */
 @media screen and (max-width: 992px) {
     .container {
@@ -172,6 +205,7 @@ img {
     body {
         margin: 00 var(--header-height) 0;
     }
+
     .section {
         padding: 2rem 0 4rem;
     }
@@ -181,12 +215,11 @@ img {
     }
 }
 
-@media screen and (max-width: 576px) {
-}
+@media screen and (max-width: 576px) {}
 
 @media screen and (max-width: 350px) {
     :root {
-    --big-font-size: 2.25rem;
+        --big-font-size: 2.25rem;
     }
 
     .container {
