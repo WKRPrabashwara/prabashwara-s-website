@@ -61,7 +61,11 @@
 }
 
 .qualification__calendar {
-    font-size: var(--small-font-size);
+    font-size: var(--smaller-font-size);
+}
+
+.qualification__calendar-icon {
+    display: inline;
 }
 
 .qualification__rounder {
@@ -78,6 +82,21 @@
     height: 100%;
     background-color: var(--text-color);
     transform: translate(6px, -7px);
+}
+
+.more__details {
+    font-size: 0.7rem;
+    font-weight: var(--font-semibold);
+}
+
+.more__text {
+    display: inline;
+    text-decoration: underline;
+}
+
+.more__icon {
+    display: inline;
+    margin-right: 12px;
 }
 
 /* BREAK POINTS */
