@@ -23,7 +23,7 @@ const ScrollUp = () => {
   }, []);
 
   return (
-    <a href="#top" className="scrollup" aria-label="Scroll to top">
+    <a href="#top" className="scrollup animate-bounce w-6 h-6" aria-label="Scroll to top">
       <HiOutlineArrowSmUp className="scrollup__icon" />
     </a>
   );

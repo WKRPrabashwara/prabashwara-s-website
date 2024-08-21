@@ -1,10 +1,12 @@
 .scrollup {
+    width: 2.5rem;
+    height: 2.5rem;
     position: fixed;
     right: 2.5rem;
     bottom: -20%;
     background-color: var(--title-color);
     opacity: 0.8;
-    padding: 0.3rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 0.4rem;
     z-index: var(--tooltip);
     transition: .4s;
@@ -28,7 +30,7 @@
 @media screen and (max-width: 992px) {
    .scrollup {
     right: 1.5rem;
-    padding: 0.25rem 0.4rem;
+    /* padding: 0.25rem 0.25rem; */
    }
 
    .scrollup__icon {

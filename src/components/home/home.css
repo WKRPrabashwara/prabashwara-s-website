@@ -63,7 +63,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* filter: grayscale(.5); */
+    filter: grayscale(.5);
     box-shadow: inset 0 0 0 9px rgb(225 225 225 / 30%);
     order: 1;
     justify-self: center;

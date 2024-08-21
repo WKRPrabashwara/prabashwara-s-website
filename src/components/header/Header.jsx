@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import './header.css';
 import { IoQrCode } from "react-icons/io5";
-import { HiOutlineHome, HiOutlineUser, HiOutlineBadgeCheck, HiOutlineClipboardList, HiOutlinePhotograph, HiOutlineMail, HiX, HiOutlineMenu } from "react-icons/hi";
-
+import { HiOutlineHome, HiOutlineUser, HiOutlineBadgeCheck, HiOutlinePhotograph, HiOutlineMail, HiX, HiOutlineMenu } from "react-icons/hi";
+// HiOutlineClipboardList - add to above line after build portfolio
 
 const Header = () => {
     window.addEventListener("scroll", function () {
