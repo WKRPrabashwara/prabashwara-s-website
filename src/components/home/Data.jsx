@@ -11,7 +11,7 @@ const Data = () => {
                 Student <HiAcademicCap className='title__icon animated-icon' />
             </h3>
             <p className="home__description">
-                Hi&#44; I&rsquo;m Prabashwara — a science student passionate about discovery&#46; Welcome to my site&#33; Check out my projects and blog&#44; and feel free to reach out if you&rsquo;d like to connect&#46;
+                Hi, I'm Prabashwara — a science student passionate about discovery. Explore my projects and blog, and get in touch if you'd like to connect!
             </p>
 
             <a href="#contact" className="button button--flex">

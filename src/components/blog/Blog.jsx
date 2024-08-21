@@ -6,6 +6,7 @@ import { PiShareFat } from 'react-icons/pi';
 import { BiLike, BiDislike } from 'react-icons/bi';
 import { HiX, HiOutlineArrowSmRight } from 'react-icons/hi';
 import { CiCalendar } from 'react-icons/ci';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const SwiperSection = ({ searchTerm, setSearchTerm }) => {
     return (
@@ -82,6 +83,35 @@ const Blog = () => {
         }
     };
 
+    // Function to split text into chunks of a given size
+    const splitTextIntoChunks = (text, chunkSize) => {
+        const chunks = [];
+        for (let i = 0; i < text.length; i += chunkSize) {
+            chunks.push(text.slice(i, i + chunkSize));
+        }
+        return chunks;
+    };
+
+    const PostContent = ({ content }) => {
+        const chunkSize = 500; // Set your desired chunk size
+
+        return content.map((paragraph, index) => {
+            // Split each paragraph into chunks
+            const chunks = splitTextIntoChunks(paragraph, chunkSize);
+
+            return (
+                <div key={index}>
+                    {chunks.map((chunk, chunkIndex) => (
+                        <p key={chunkIndex} className="read__modal-content-text full-text">
+                            {chunk}
+                        </p>
+                    ))}
+                    <br /> {/* Adds space between paragraphs */}
+                </div>
+            );
+        });
+    };
+
     const filteredPosts = filterPosts();
 
     return (
@@ -99,7 +129,8 @@ const Blog = () => {
                             <img src={selectedPost.imageUrl} alt={selectedPost.title} className="Blog__card-image" />
                             <h2 className="read__modal-title">{selectedPost.title}</h2>
                             <p className="read__card-date"><CiCalendar className='title__icon' /> {selectedPost.date}</p>
-                            <p className="read__modal-content-text full-text">{selectedPost.content}</p>
+                            <PostContent content={selectedPost.content} />
+                            <a href={selectedPost.more} rel="noopener noreferrer" target='_blank' className="read__modal-references__link"><FaExternalLinkAlt className='title__icon' /> References</a>
                         </div>
                     </div>
                 </div>

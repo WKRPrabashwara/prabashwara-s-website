@@ -124,8 +124,9 @@
 
 .Blog__card-content {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     padding: 8px 12px;
+    padding: 16px 0 16px 12px;
 }
 
 .Blog__card-title {
@@ -203,6 +204,26 @@
     scrollbar-color: var(--text-color) #f1f1f1;
     display: gird;
     grid-template-rows: repeat(4, 1fr);
+    padding-right: 8px;
+}
+
+/* Webkit scrollbar styling */
+.reader__container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.reader__container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.reader__container::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+    border-radius: 10px;
+}
+
+.reader__container::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
 }
 
 .Blog__modal-close {
@@ -237,6 +258,12 @@
     font-size: 1rem;
     overflow: visible;
     text-overflow: clip;
+}
+
+.read__modal-references__link {
+    font-size: var(--smaller-font-size);
+    text-transform: uppercase;
+    font-weight: var(--font-semibold);
 }
 
 .active-modal {

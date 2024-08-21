@@ -4,20 +4,16 @@
 }
 
 .footer__container {
-    padding: 2rem 0 6rem;
+    padding-top: 2rem;
 }
 
-.footer__title, .footer__link {
+.footer__title {
     color: var(--title-color);
 }
 
 .footer__title {
     text-align: center;
     margin-bottom: var(--mb-2);
-}
-
-.footer__link:hover {
-    color: var(--title-color-dark);
 }
 
 .footer__list {
@@ -52,6 +48,13 @@
     color: var(--title-color);
     text-align: center;
     font-size: var(--smaller-font-size);
+}
+
+.footer__text {
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: var(--mb-2);
+    font-size: 14px;
 }
 
 /* BREAK POINTS */
