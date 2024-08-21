@@ -8,7 +8,7 @@ const Data = () => {
                 Rivibibu Prabashwara
             </h1>
             <h3 className="home__subtitle">
-                Student <HiAcademicCap className='title__icon' />
+                Student <HiAcademicCap className='title__icon animated-icon' />
             </h3>
             <p className="home__description">
                 Hi&#44; I&rsquo;m Prabashwara — a science student passionate about discovery&#46; Welcome to my site&#33; Check out my projects and blog&#44; and feel free to reach out if you&rsquo;d like to connect&#46;

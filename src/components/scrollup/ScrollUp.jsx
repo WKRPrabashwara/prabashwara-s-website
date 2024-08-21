@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './scrollup.css';
 import { HiOutlineArrowSmUp } from "react-icons/hi";
 
 const ScrollUp = () => {
-    window.addEventListener("scroll", function () {
-        const scrollUp = document.querySelector(".scrollup");
-        if(this.scrollY >= 560) scrollUp.classList.add("show-scroll");
-        else scrollUp.classList.remove("show-scroll");
-    });
-  
-    return (
-    <a href="#" className="scrollup"><HiOutlineArrowSmUp className="scrollup__icon"/></a>
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollUp = document.querySelector(".scrollup");
+      if (window.scrollY >= 560) {
+        scrollUp.classList.add("show-scroll");
+      } else {
+        scrollUp.classList.remove("show-scroll");
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <a href="#top" className="scrollup" aria-label="Scroll to top">
+      <HiOutlineArrowSmUp className="scrollup__icon" />
+    </a>
   );
 }
 

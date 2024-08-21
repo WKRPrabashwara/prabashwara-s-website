@@ -8,6 +8,7 @@
     width: 350px;
     border-radius: 1.5rem;
     justify-self: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .about__info {
@@ -18,10 +19,15 @@
 
 .about__box {
     background-color: var(--container-color);
-    border: 1px solid rgba(0, 0, 0, 12);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.15) 0px 0px 0px 1px;
     border-radius: 0.75rem;
     text-align: center;
     padding: 1rem 1.25rem;
+    transition: .1s;
+}
+
+.about__box:hover {
+    transform: scale(1.025);
 }
 
 .about__icon {
@@ -32,7 +38,7 @@
 
 .about__title {
     font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-semibold);
 }
 
 .about__subtitle {
@@ -42,6 +48,11 @@
 .about__description {
     padding: 0 4rem 0 0;
     margin-bottom: var(--mb-2-5);
+}
+
+.about__button__icon {
+    font-size: 1.3rem;
+    margin-left: 3px;
 }
 
 /* BREAK POINTS */
