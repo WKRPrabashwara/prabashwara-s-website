@@ -84,12 +84,25 @@ const Blog = () => {
     };
 
     const splitTextIntoChunks = (text, chunkSize) => {
+        const words = text.split(' ');
         const chunks = [];
-        for (let i = 0; i < text.length; i += chunkSize) {
-            chunks.push(text.slice(i, i + chunkSize));
+        let currentChunk = '';
+    
+        words.forEach(word => {
+            if (currentChunk.length + word.length + 1 <= chunkSize) {
+                currentChunk += (currentChunk ? ' ' : '') + word;
+            } else {
+                chunks.push(currentChunk);
+                currentChunk = word;
+            }
+        });
+    
+        if (currentChunk) {
+            chunks.push(currentChunk);
         }
+    
         return chunks;
-    };
+    };    
 
     const PostContent = ({ content }) => {
         const chunkSize = 200;
@@ -102,10 +115,9 @@ const Blog = () => {
                     {chunks.map((chunk, chunkIndex) => (
                         <p key={chunkIndex} className="read__modal-content-text full-text">
                             {chunk}
+                            <div style={{ marginBottom: '1rem' }}></div>
                         </p>
                     ))}
-                    <br />
-                    <br />
                 </div>
             );
         });

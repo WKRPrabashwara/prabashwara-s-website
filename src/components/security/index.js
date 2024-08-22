@@ -14,6 +14,7 @@ document.addEventListener('keydown', function(event) {
         { ctrlKey: true, key: 'C' },  // Prevent Copy
         { ctrlKey: true, key: 'U' },  // Prevent View Source
         { ctrlKey: true, key: 'P' },  // Prevent Print
+        { ctrlKey: true, key: 'V' },  // Prevent Paste
         { ctrlKey: true, shiftKey: true, key: 'I' }, // Prevent DevTools
         { key: 'F12' } // Prevent F12
     ];
@@ -24,6 +25,12 @@ document.addEventListener('keydown', function(event) {
             event.stopPropagation();
         }
     });
+
+    // Explicitly prevent Ctrl + C and Ctrl + V
+    if (event.ctrlKey && (event.key === 'c' || event.key === 'v')) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
 });
 
 // Anti-debugging: detect dev tools via console and window size

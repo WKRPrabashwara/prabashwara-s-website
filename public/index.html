@@ -14,7 +14,25 @@
 </head>
 
 <body>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/enable-javascript.html" />
+    <style>
+      body {
+        display: none;
+      }
+
+      .js-enabled body {
+        display: block;
+      }
+    </style>
+    <div>
+    </div>
+  </noscript>
+  <script>
+    document.documentElement.className = "js-enabled";
+  </script>
   <div id="root"></div>
 </body>
+
 
 </html>
