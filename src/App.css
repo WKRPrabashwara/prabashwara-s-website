@@ -78,6 +78,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body,
@@ -92,6 +93,7 @@ body {
     background-color: var(--body-color);
     color: var(--text-color);
     cursor: default;
+    overflow-x: hidden;
 }
 
 h1,

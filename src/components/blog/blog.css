@@ -66,6 +66,10 @@
 /* General container for Blog */
 .Blog {
     padding: 20px;
+    /* height: 540px; */
+    width: 80%;
+    margin-top: 5rem !important;
+    margin-bottom: 3rem !important;
 }
 
 .Blog__scrolling-cards {
@@ -124,13 +128,20 @@
 
 .Blog__card-content {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: max-content 1fr 1fr 1fr;
     padding: 8px 12px;
-    padding: 16px 0 16px 12px;
+    padding: 16px 12px 16px 12px;
 }
 
 .Blog__card-title {
-    color: var(--title-color);
+    font-size: var(--small-font-size) !important;
+    letter-spacing: -1px;
+    word-wrap: break-word; /* Ensures long words break */
+    overflow: hidden; /* Hides any overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text overflows */
+    white-space: normal; /* Allows wrapping */
+    max-width: 100%; /* Ensure it stays within the container */
+    margin-bottom: 5px;
 }
 
 .Blog__card-date {
@@ -258,6 +269,7 @@
     font-size: 1rem;
     overflow: visible;
     text-overflow: clip;
+    letter-spacing: -1px;
 }
 
 .read__modal-references__link {
@@ -272,13 +284,23 @@
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
-    .Blog__modal-content {
-        width: 90%;
+
+@media screen and (max-width: 1080px) {
+    .Blog {
+        display: block;
+        margin: 0 auto;
     }
 }
 
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 768px) {
+    .Blog {
+        height: 100%;
+    }
+
+    .Blog__modal-content {
+        width: 90%;
+    }
+
     .Blog__swiper-title {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -302,16 +324,14 @@
     }
 
     .Blog__card-image {
-        width: 500px;
+        display: block;
+        margin: 0 auto;
+        height: 80%;
     }
 
     .Blog__card-content {
         text-overflow: ellipsis;
-    }
-
-    .Blog__card-title {
-        overflow: hidden;
-        text-overflow: ellipsis;
+        letter-spacing: -1px;
     }
 
     .Blog__card-actions {
@@ -324,5 +344,28 @@
     .Blog__card-button {
         background-color: transparent;
         color: var(--text-color);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Blog__card-image {
+        display: block;
+        margin: 0 auto;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Blog__card-title {
+        font-size: var(--small-font-size) !important;
+        letter-spacing: -1px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Blog {
+        display: block;
+        margin: 0 10px;
+        width: 96%;
     }
 }

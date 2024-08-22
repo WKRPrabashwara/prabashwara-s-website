@@ -151,6 +151,11 @@
     display: none;
 }
 
+.contact__content {
+    display: block;
+    margin: 0 auto;
+}
+
 /* BREAK POINTS */
 @media screen and (max-width: 992px) {
     .contact__container {
@@ -159,9 +164,18 @@
 }
 
 @media screen and (max-width: 768px) {
+    /* .contact {
+        display: block;
+        margin: 0 auto;
+    } */
+
     .contact__container {
-        grid-template-columns: 1fr;
-        row-gap: 3rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contact__content {
+        margin-bottom: 1.5rem;
     }
 
     .contact__info {

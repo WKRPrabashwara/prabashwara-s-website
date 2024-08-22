@@ -7,17 +7,17 @@ const Info = () => {
   return (
     <div className="about__info grid">
       <div className="about__box">
-        <FaBrain className="about__icon" />
+        <FaBrain className="about__icon title__icon" />
         <h3 className="about__title">Research & Learning</h3>
         <span className="about__subtitle">Ongoing Journey</span>
       </div>
       <div className="about__box">
-        <IoRocketOutline className="about__icon" />
+        <IoRocketOutline className="about__icon title__icon" />
         <h3 className="about__title">Passion for Innovation</h3>
         <span className="about__subtitle">Driven by Curiosity</span>
       </div>
       <div className="about__box">
-        <AiOutlineGlobal className="about__icon" />
+        <AiOutlineGlobal className="about__icon title__icon" />
         <h3 className="about__title">Community Involvement</h3>
         <span className="about__subtitle">Science Outreach</span>
       </div>

@@ -72,6 +72,7 @@
 
     .about__data {
         text-align: center;
+        margin-right: 30px;
     }
 
     .about__info {
@@ -91,6 +92,27 @@
 
     .about__description {
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about__container {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .about__data {
+        text-align: center;
+        margin: 0;
+    }
+
+    .about__img {
+        display: block;
+        margin: 0 auto 1rem auto;
+    }
+
+    .about__info.grid {
+        display: none;
     }
 }
 

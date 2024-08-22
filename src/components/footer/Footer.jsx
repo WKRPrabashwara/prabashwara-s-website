@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
         <div className="footer__container container">
-            <h1 className="footer__title">Rivibibu Prabashwara</h1>
+            <h1 className="footer__title">Praba$hwara</h1>
             <p class="footer__text">&copy; Copyright 2024. All right reserved</p>
             <div className="footer__social">
                 <a href="https://twitter.com/cyphrsylph" className="home__social-icon" target="_blank" rel="noreferrer">

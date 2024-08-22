@@ -10,17 +10,15 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const SwiperSection = ({ searchTerm, setSearchTerm }) => {
     return (
-        <div class="search__container">
+        <div className="search__container">
             <input
-                class="search__input"
+                className="search__input"
                 type="text"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
         </div>
-
-
     );
 };
 
@@ -33,7 +31,7 @@ const ScrollingCards = ({ posts, openModal }) => {
                     <div className="Blog__card-content">
                         <h3 className="Blog__card-title">{post.title}</h3>
                         <p className="Blog__card-date"><CiCalendar className='title__icon' /> {post.date}</p>
-                        <p className="Blog__card-text">{post.content.slice(0, 100)}...</p>
+                        <p className="Blog__card-text">{post.content}</p>
                         <div className="Blog__card-actions">
                             <button className="Blog__card-button"><BiLike /></button>
                             <button className="Blog__card-button"><BiDislike /></button>
@@ -68,7 +66,7 @@ const Blog = () => {
 
     const filterPosts = () => {
         try {
-            return additionalPosts.filter(post => {
+            const filtered = additionalPosts.filter(post => {
                 const searchLower = searchTerm.toLowerCase();
                 const titleMatch = post.title.toLowerCase().includes(searchLower);
                 const contentMatch = typeof post.content === 'string'
@@ -77,13 +75,14 @@ const Blog = () => {
 
                 return titleMatch || contentMatch;
             });
+
+            return filtered.reverse(); // Reverse the order of posts here
         } catch (error) {
             console.error("Error filtering posts:", error);
             return []; // Return an empty array if there's an error
         }
     };
 
-    // Function to split text into chunks of a given size
     const splitTextIntoChunks = (text, chunkSize) => {
         const chunks = [];
         for (let i = 0; i < text.length; i += chunkSize) {
@@ -93,10 +92,9 @@ const Blog = () => {
     };
 
     const PostContent = ({ content }) => {
-        const chunkSize = 500; // Set your desired chunk size
+        const chunkSize = 200;
 
         return content.map((paragraph, index) => {
-            // Split each paragraph into chunks
             const chunks = splitTextIntoChunks(paragraph, chunkSize);
 
             return (
@@ -106,7 +104,8 @@ const Blog = () => {
                             {chunk}
                         </p>
                     ))}
-                    <br /> {/* Adds space between paragraphs */}
+                    <br />
+                    <br />
                 </div>
             );
         });

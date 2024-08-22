@@ -1,9 +1,13 @@
 .footer {
     background-color: var(--container-color);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;   /* Remove margin */
+    width: 100%; /* Ensure it spans the full width */
+    box-sizing: border-box; 
 }
 
 .footer__container {
+    position: relative;
     padding-top: 2rem;
 }
 
@@ -63,5 +67,33 @@
         padding: 0.25rem;
         border-radius: 0.25rem;
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__text {
+        margin-left: -1.5rem;
+    }
+
+    .footer__social {
+        margin-bottom: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer__text {
+        display: block;
+        max-width: 350px;
+        text-wrap: wrap;
+        text-align: center;
+        color: var(--title-color);
+        margin-bottom: var(--mb-2);
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .footer__text {
+        margin-left: -6px;
     }
 }

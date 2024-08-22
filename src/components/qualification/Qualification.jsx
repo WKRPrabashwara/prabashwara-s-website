@@ -20,6 +20,18 @@ const Qualification = () => {
             subtitle: 'GCE Ordinary Level in Sri Lanka',
             date: '2022(2023)',
             more: educationalq1pdf
+        },
+        q2: {
+            title: 'Demo',
+            subtitle: '"Ipsum" redirects here. For the car, see Toyota Ipsum.',
+            date: '2030',
+            more: educationalq1pdf
+        },
+        q3: {
+            title: 'Demo',
+            subtitle: '"Ipsum" redirects here. For the car, see Toyota Ipsum.',
+            date: '2030',
+            more: educationalq1pdf
         }
     };
 
@@ -28,6 +40,24 @@ const Qualification = () => {
             title: 'Python for Beginners',
             subtitle: 'Open Learning Platform - UoM',
             date: 'June 28, 2023',
+            more: otherq1pdf
+        },
+        q2: {
+            title: 'Demo',
+            subtitle: '"Ipsum" redirects here. For the car, see Toyota Ipsum.',
+            date: '2030',
+            more: otherq1pdf
+        },
+        q3: {
+            title: 'Demo',
+            subtitle: '"Ipsum" redirects here. For the car, see Toyota Ipsum.',
+            date: '2030',
+            more: otherq1pdf
+        },
+        q4: {
+            title: 'Demo',
+            subtitle: '"Ipsum" redirects here. For the car, see Toyota Ipsum.',
+            date: '2030',
             more: otherq1pdf
         }
     };
@@ -74,7 +104,7 @@ const Qualification = () => {
                             </div>
                         </div>
 
-                        {/* <div className="qualification__data">
+                        <div className="qualification__data">
                             <div></div>
                             <div>
                                 <span className="qualification__rounder"></span>
@@ -86,7 +116,7 @@ const Qualification = () => {
                                 <div className="qualification__calendar">
                                     <HiOutlineCalendar className="qualification__calendar-icon title__icon" /> {EducationalList.q2.date}
                                 </div>
-                                <a href="https://www.google.com" aria-label="More details" role="button" className="more__details">
+                                <a download href={EducationalList.q2.more} aria-label="More details" role="button" className="more__details">
                                     <FaExternalLinkAlt className="more__icon" />
                                     <div className="more__text">More</div>
                                 </a>
@@ -100,7 +130,7 @@ const Qualification = () => {
                                 <div className="qualification__calendar">
                                     <HiOutlineCalendar className="qualification__calendar-icon title__icon" /> {EducationalList.q3.date}
                                 </div>
-                                <a href="https://www.google.com" aria-label="More details" role="button" className="more__details">
+                                <a download href={EducationalList.q3.more} aria-label="More details" role="button" className="more__details">
                                     <FaExternalLinkAlt className="more__icon" />
                                     <div className="more__text">More</div>
                                 </a>
@@ -109,7 +139,7 @@ const Qualification = () => {
                                 <span className="qualification__rounder"></span>
                                 <span className="qualification__line"></span>
                             </div>
-                        </div> */}
+                        </div>
 
                     </div>
 
@@ -134,7 +164,7 @@ const Qualification = () => {
                             </div>
                         </div>
 
-                        {/* <div className="qualification__data">
+                        <div className="qualification__data">
                             <div></div>
                             <div>
                                 <span className="qualification__rounder"></span>
@@ -146,7 +176,7 @@ const Qualification = () => {
                                 <div className="qualification__calendar">
                                     <HiOutlineCalendar className="qualification__calendar-icon title__icon" /> {OtherList.q2.date}
                                 </div>
-                                <a href="https://www.google.com" aria-label="More details" role="button" className="more__details">
+                                <a download href={OtherList.q2.more} aria-label="More details" role="button" className="more__details">
                                     <FaExternalLinkAlt className="more__icon" />
                                     <div className="more__text">More</div>
                                 </a>
@@ -160,7 +190,7 @@ const Qualification = () => {
                                 <div className="qualification__calendar">
                                     <HiOutlineCalendar className="qualification__calendar-icon title__icon" /> {OtherList.q3.date}
                                 </div>
-                                <a href="https://www.google.com" aria-label="More details" role="button" className="more__details">
+                                <a download href={OtherList.q3.more} aria-label="More details" role="button" className="more__details">
                                     <FaExternalLinkAlt className="more__icon" />
                                     <div className="more__text">More</div>
                                 </a>
@@ -183,12 +213,12 @@ const Qualification = () => {
                                 <div className="qualification__calendar">
                                     <HiOutlineCalendar className="qualification__calendar-icon title__icon" /> {OtherList.q4.date}
                                 </div>
-                                <a href="https://www.google.com" aria-label="More details" role="button" className="more__details">
+                                <a download href={OtherList.q4.more} aria-label="More details" role="button" className="more__details">
                                     <FaExternalLinkAlt className="more__icon" />
                                     <div className="more__text">More</div>
                                 </a>
                             </div>
-                        </div> */}
+                        </div>
 
                     </div>
 

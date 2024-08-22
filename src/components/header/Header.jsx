@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import './header.css';
-import { IoQrCode } from "react-icons/io5";
 import { HiOutlineHome, HiOutlineUser, HiOutlineBadgeCheck, HiOutlinePhotograph, HiOutlineMail, HiX, HiOutlineMenu } from "react-icons/hi";
 // HiOutlineClipboardList - add to above line after build portfolio
 
@@ -17,7 +16,7 @@ const Header = () => {
     return(
         <header className="header">
             <nav className="nav container">
-                <a href="index.html" className="nav__logo"><IoQrCode className="title__icon" /> Prabashwara&#46;</a>
+                <a href="index.html" className="nav__logo">Praba$hwara&#46;</a>
                 <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
                     <ul className="nav__list grid">
                         <li className="nav__item">
