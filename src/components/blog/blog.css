@@ -270,6 +270,7 @@
     overflow: visible;
     text-overflow: clip;
     letter-spacing: -1px;
+    font-family: "IBM Plex Mono", system-ui;
 }
 
 .read__modal-references__link {
